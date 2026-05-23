@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cb2oygpeuv5jj"]
+
+[ext_resource type="Script" uid="uid://bm0555w0up6vr" path="res://bear.gd" id="1_wvk3l"]
+[ext_resource type="Texture2D" uid="uid://mf76qvp10vgx" path="res://bear art/bear run/untitled_0001.png" id="2_py70x"]
+[ext_resource type="Texture2D" uid="uid://kpn7tlym08u8" path="res://bear art/bear jump/untitled_0001.png" id="2_ylsb8"]
+[ext_resource type="Texture2D" uid="uid://0vf8nj5isx4" path="res://bear art/bear run/untitled_0002.png" id="3_6uh6h"]
+[ext_resource type="Texture2D" uid="uid://wf4q0ssm1e35" path="res://bear art/bear jump/untitled_0002.png" id="3_nx3mo"]
+[ext_resource type="Texture2D" uid="uid://b8lt6ojuxu0k2" path="res://bear art/bear run/untitled_0003.png" id="4_q5r7r"]
+[ext_resource type="Texture2D" uid="uid://ea3wr6xerlpc" path="res://bear art/bear jump/untitled_0003.png" id="4_xnx06"]
+[ext_resource type="Texture2D" uid="uid://dllggdcbam0yw" path="res://bear art/bear jump/untitled_0004.png" id="5_idrtj"]
+[ext_resource type="Texture2D" uid="uid://bqllnk3ppn8em" path="res://bear art/bear run/untitled_0004.png" id="5_whgdy"]
+[ext_resource type="Texture2D" uid="uid://bxvtlywe78y0j" path="res://bear art/bear jump/untitled_0005.png" id="6_3u0l7"]
+[ext_resource type="Texture2D" uid="uid://3yc42ada76nl" path="res://bear art/bear jump/untitled_0006.png" id="7_kiynv"]
+[ext_resource type="Texture2D" uid="uid://b4jv5xohkx2qa" path="res://bear art/bear jump/untitled_0007.png" id="8_siw0v"]
+[ext_resource type="Texture2D" uid="uid://cs8dn64jptrtb" path="res://bear art/bear jump/untitled_0008.png" id="9_7h6af"]
+[ext_resource type="Texture2D" uid="uid://cxy7nmitte3rh" path="res://bear art/bear jump/untitled_0009.png" id="10_2ppig"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py70x"]
+radius = 22.0
+height = 44.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v5e2u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ylsb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nx3mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xnx06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_idrtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3u0l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kiynv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_siw0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7h6af")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2ppig")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_py70x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6uh6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q5r7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_whgdy")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+}]
+
+[node name="bear" type="CharacterBody2D" unique_id=1161236892]
+script = ExtResource("1_wvk3l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2060859821]
+position = Vector2(44, 0)
+shape = SubResource("CapsuleShape2D_py70x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=84708430]
+position = Vector2(44, 0)
+sprite_frames = SubResource("SpriteFrames_v5e2u")
+animation = &"jump"

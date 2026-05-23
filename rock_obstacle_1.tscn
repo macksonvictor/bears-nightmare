@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d3qv8k246nw6u"]
+
+[ext_resource type="Script" uid="uid://cc25boqf0q0gs" path="res://rock_obstacle_1.gd" id="1_bwgj8"]
+[ext_resource type="Texture2D" uid="uid://c7m30rgkyrrsc" path="res://obstacle art/log_stone_1.png" id="2_snesl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3p5wb"]
+size = Vector2(60, 59)
+
+[node name="RockObstacle1" type="Area2D" unique_id=366830628]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_bwgj8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=918804997]
+position = Vector2(0, -8)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_snesl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=131931283]
+position = Vector2(0, -15)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_3p5wb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://bggdrnjddk6n4"]
+
+[ext_resource type="Script" uid="uid://678jvteqenlk" path="res://world.gd" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://cfu2xnmrpav57" path="res://log_obstacle.tscn" id="2_036b0"]
+[ext_resource type="PackedScene" uid="uid://cb2oygpeuv5jj" path="res://bear.tscn" id="2_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://cvn5o6tt4uy21" path="res://world art/pixellab-stone-dirt-ground-path-tile--p-1779399333569.png" id="3_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://d3qv8k246nw6u" path="res://rock_obstacle_1.tscn" id="3_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://bpd2g1bobj3wk" path="res://rock_obstacle_2.tscn" id="4_gbfbk"]
+[ext_resource type="Texture2D" uid="uid://djh6c5rhx1e28" path="res://world art/forest-back-trees.png" id="5_ioo17"]
+[ext_resource type="Texture2D" uid="uid://d1e2w6wbvsxt6" path="res://world art/céu.png" id="5_k3n1d"]
+[ext_resource type="Texture2D" uid="uid://be253h5q2abes" path="res://world art/mountain.png" id="5_wse8f"]
+[ext_resource type="Texture2D" uid="uid://ckfcjt6jx20ax" path="res://world art/mato2.png" id="6_ioo17"]
+[ext_resource type="Texture2D" uid="uid://bvlhip2wstaip" path="res://world art/arvore da frente.png" id="7_ic0uy"]
+[ext_resource type="Texture2D" uid="uid://bl1u7s4fis2vx" path="res://world art/grama.png" id="8_wse8f"]
+[ext_resource type="Texture2D" uid="uid://bv173qs6xbrx6" path="res://world art/mato.png" id="9_70uel"]
+[ext_resource type="Texture2D" uid="uid://dkfnapsov7b50" path="res://world art/bananeira-.png" id="11_2u3nc"]
+[ext_resource type="Texture2D" uid="uid://dveqnufeehoxt" path="res://world art/arbusto dark-1.png.png" id="12_2o6r5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3sb7"]
+size = Vector2(480, 40)
+
+[node name="World" type="Node2D" unique_id=1382428096]
+script = ExtResource("1_f3sb7")
+obstacle_scenes = Array[PackedScene]([ExtResource("2_036b0"), ExtResource("3_pkg7o"), ExtResource("4_gbfbk")])
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1538014422]
+
+[node name="LayerCeu" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1179448833]
+motion_scale = Vector2(0.05, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/LayerCeu" unique_id=734777214]
+position = Vector2(0, -75)
+scale = Vector2(0.78431374, 0.5)
+texture = ExtResource("5_k3n1d")
+centered = false
+
+[node name="LayerMountains" type="ParallaxLayer" parent="ParallaxBackground" unique_id=233649440]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/LayerMountains" unique_id=801188897]
+position = Vector2(300, 40)
+scale = Vector2(0.4, 0.3)
+texture = ExtResource("5_wse8f")
+
+[node name="LayerBackTrees" type="ParallaxLayer" parent="ParallaxBackground" unique_id=510101389]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(481, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/LayerBackTrees" unique_id=1162688425]
+position = Vector2(426, 63)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("5_ioo17")
+
+[node name="LayerFrontTrees" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1555272734]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/LayerFrontTrees" unique_id=925763618]
+position = Vector2(300, 85)
+texture = ExtResource("7_ic0uy")
+
+[node name="LayerGrama" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1656657615]
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="GramaSprite" type="Sprite2D" parent="ParallaxBackground/LayerGrama" unique_id=1046919836]
+position = Vector2(300, 168)
+texture = ExtResource("8_wse8f")
+
+[node name="LayerBushBase" type="ParallaxLayer" parent="ParallaxBackground" unique_id=70261960]
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/LayerBushBase" unique_id=1250339314]
+position = Vector2(300, 35)
+scale = Vector2(0.523, 0.495)
+texture = ExtResource("9_70uel")
+
+[node name="LayerFrontTrees2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1878771387]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/LayerFrontTrees2" unique_id=1928619225]
+position = Vector2(250, 110)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_2u3nc")
+
+[node name="LayerPlants" type="ParallaxLayer" parent="ParallaxBackground" unique_id=559092056]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(500, 0)
+
+[node name="LayerMato" type="ParallaxLayer" parent="ParallaxBackground" unique_id=226953692]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="MatoSprite" type="Sprite2D" parent="ParallaxBackground/LayerMato" unique_id=526160255]
+position = Vector2(340, 115)
+scale = Vector2(0.5, 0.4)
+texture = ExtResource("6_ioo17")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2017291036]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=172860486]
+centered = false
+
+[node name="LayerPista" type="ParallaxLayer" parent="ParallaxBackground" unique_id=506147109]
+motion_mirroring = Vector2(480, 0)
+
+[node name="PistaSprite" type="Sprite2D" parent="ParallaxBackground/LayerPista" unique_id=34546522]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-3, 213.99997)
+scale = Vector2(0.50364584, 0.43800002)
+texture = ExtResource("3_aqk2v")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 130)
+
+[node name="LayerDarkFront" type="ParallaxLayer" parent="ParallaxBackground" unique_id=993097217]
+motion_scale = Vector2(1.05, 1)
+motion_mirroring = Vector2(480, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/LayerDarkFront" unique_id=732337285]
+position = Vector2(-3, 226.99998)
+scale = Vector2(0.33072916, 0.08650924)
+texture = ExtResource("12_2o6r5")
+centered = false
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=981842801]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1334752240]
+position = Vector2(237, 248)
+shape = SubResource("RectangleShape2D_f3sb7")
+
+[node name="bear" parent="." unique_id=1161236892 instance=ExtResource("2_fj7yv")]
+position = Vector2(79, 199)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=450625608]
+
+[node name="ObstacleTimer" type="Timer" parent="." unique_id=1453680087]
+wait_time = 1.5
+autostart = true
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1312854782]
+position = Vector2(520, 230)
+
+[connection signal="timeout" from="ObstacleTimer" to="." method="_on_obstacle_timer_timeout"]
