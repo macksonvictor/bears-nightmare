@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc8axf2mt6v76"
+path="res://.godot/imported/Moonlit Pixel Hunt.mp3-401373231578ea952a31134bbf56e851.mp3str"
+
+[deps]
+
+source_file="res://áudio/Moonlit Pixel Hunt.mp3"
+dest_files=["res://.godot/imported/Moonlit Pixel Hunt.mp3-401373231578ea952a31134bbf56e851.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

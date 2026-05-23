@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gtbtyre08pr8"
+path="res://.godot/imported/2026-05-22 recording suno-com.mp3-e922ab5b1a120858e3b8010ad910f1a1.mp3str"
+
+[deps]
+
+source_file="res://áudio/2026-05-22 recording suno-com.mp3"
+dest_files=["res://.godot/imported/2026-05-22 recording suno-com.mp3-e922ab5b1a120858e3b8010ad910f1a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
