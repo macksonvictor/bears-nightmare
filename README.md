@@ -2,7 +2,7 @@
 
 ![Bear's Nightmare Banner](world%20art/urso.png)
 
-# 🐻 BEAR'S NIGHTMARE
+#  BEAR'S NIGHTMARE
 
 **A nightmare you can't wake up from.**
 
