@@ -1,6 +1,6 @@
 <div align="center">
 
-![Bear's Nightmare Banner](world%20art/urso.png)
+![Bear's Nightmare Banner](bear%20art/urso.png)
 
 #  BEAR'S NIGHTMARE
 
